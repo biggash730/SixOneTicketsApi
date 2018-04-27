@@ -60,14 +60,6 @@ namespace PianoBarApi.Migrations
                 Privileges = a.Trim(','),
                 Locked = true
             };
-            var customer = new Profile
-            {
-                Name = "Customer",
-                Notes = "Customer Role",
-                Privileges = "",
-                Locked = true
-            };
-            context.Profiles.AddOrUpdate(x=> x.Name, customer);
             #endregion
 
             #region Users
@@ -80,25 +72,25 @@ namespace PianoBarApi.Migrations
             };
 
             //Admin User
-            if (UserManager.FindByNameAsync("0207985828").Result == null)
+            if (UserManager.FindByNameAsync("admin").Result == null)
             {
                 var res = userManager.CreateAsync(new User
                 {
                     Name = "Administrator",
                     Profile = adminProfile,
-                    UserName = "0207985828",
-                    PhoneNumber = "0207985828",
+                    UserName = "admin",
+                    PhoneNumber = "",
                     City = "Accra",
                     DateOfBirth = DateTime.Now.AddYears(-30),
                     CreatedAt = DateTime.Now,
                     ModifiedAt = DateTime.Now,
                     TokenVerified = true,
                     Locked = false,
-                }, "password1");
+                }, "admin@app");
 
                 if (res.Result.Succeeded)
                 {
-                    var userId = userManager.FindByNameAsync("0207985828").Result.Id;
+                    var userId = userManager.FindByNameAsync("admin").Result.Id;
                     roles.ForEach(q => userManager.AddToRole(userId, q.Name));
                 }
             }
