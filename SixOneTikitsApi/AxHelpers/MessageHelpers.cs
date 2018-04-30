@@ -2,10 +2,10 @@
 using System.Linq;
 using System.Net;
 using System.Text;
-using PianoBarApi.Models;
 using RestSharp;
+using SixOneTikitsApi.Models;
 
-namespace PianoBarApi.AxHelpers
+namespace SixOneTikitsApi.AxHelpers
 {
     public class MessageHelpers
     {

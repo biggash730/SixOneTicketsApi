@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Threading.Tasks;
-using PianoBarApi.AxHelpers;
-using PianoBarApi.DataAccess.Repositories;
-using PianoBarApi.Models;
+using SixOneTikitsApi.AxHelpers;
+using SixOneTikitsApi.DataAccess.Repositories;
+using SixOneTikitsApi.Models;
 
-namespace PianoBarApi.LogicUnit
+namespace SixOneTikitsApi.LogicUnit
 {
     public class Messenger
     {

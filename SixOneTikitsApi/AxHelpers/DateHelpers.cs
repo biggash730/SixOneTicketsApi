@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace PianoBarApi.AxHelpers
+namespace SixOneTikitsApi.AxHelpers
 {
     public class DateHelpers
     {

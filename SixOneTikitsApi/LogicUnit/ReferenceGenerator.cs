@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace PianoBarApi.LogicUnit
+namespace SixOneTikitsApi.LogicUnit
 {
     public class ReferenceGenerator
     {

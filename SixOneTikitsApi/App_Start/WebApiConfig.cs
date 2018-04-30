@@ -2,7 +2,7 @@
 using System.Web.Http.Cors;
 using Microsoft.Owin.Security.OAuth;
 
-namespace PianoBarApi
+namespace SixOneTikitsApi
 {
     public static class WebApiConfig
     {

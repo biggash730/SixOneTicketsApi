@@ -1,6 +1,6 @@
 ﻿using System.Web.Optimization;
 
-namespace PianoBarApi
+namespace SixOneTikitsApi
 {
     public class BundleConfig
     {

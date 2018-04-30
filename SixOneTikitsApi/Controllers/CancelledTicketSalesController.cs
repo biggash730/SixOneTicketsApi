@@ -1,14 +1,13 @@
 using System;
-using System.Data.Entity;
 using System.Linq;
 using System.Web.Http;
 using Newtonsoft.Json;
-using PianoBarApi.AxHelpers;
-using PianoBarApi.DataAccess.Filters;
-using PianoBarApi.Extensions;
-using PianoBarApi.Models;
+using SixOneTikitsApi.AxHelpers;
+using SixOneTikitsApi.DataAccess.Filters;
+using SixOneTikitsApi.Extensions;
+using SixOneTikitsApi.Models;
 
-namespace PianoBarApi.Controllers
+namespace SixOneTikitsApi.Controllers
 {
     [Authorize]
     [RoutePrefix("api/cancelledticketsales")]

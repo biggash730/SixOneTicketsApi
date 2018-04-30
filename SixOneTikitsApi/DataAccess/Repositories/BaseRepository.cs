@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
-using PianoBarApi.DataAccess.Filters;
-using PianoBarApi.Models;
+using SixOneTikitsApi.DataAccess.Filters;
+using SixOneTikitsApi.Models;
 
-namespace PianoBarApi.DataAccess.Repositories
+namespace SixOneTikitsApi.DataAccess.Repositories
 {
     public class BaseRepository<T> where T : class
     {

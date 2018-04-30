@@ -10,7 +10,7 @@ using Microsoft.AspNet.Identity;
 using Newtonsoft.Json;
 using RestSharp;
 
-namespace PianoBarApi.AxHelpers
+namespace SixOneTikitsApi.AxHelpers
 {
     public class WebHelpers
     {

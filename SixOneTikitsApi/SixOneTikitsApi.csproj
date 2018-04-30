@@ -248,6 +248,7 @@
     <Compile Include="AxHelpers\Reporter.cs" />
     <Compile Include="Controllers\CancelledTicketSalesController.cs" />
     <Compile Include="Controllers\DashboardController.cs" />
+    <Compile Include="Controllers\ReportsController.cs" />
     <Compile Include="Controllers\SettingsController.cs" />
     <Compile Include="Controllers\TicketsController.cs" />
     <Compile Include="DataAccess\Repositories\TicketSaleRepository.cs" />
@@ -296,16 +297,10 @@
     <Content Include="Assets\Images\loading.gif" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
-    <Content Include="ReportTemplates\CancelledOrders.html" />
     <Content Include="ReportTemplates\CancelledTicketSales.html" />
-    <Content Include="ReportTemplates\CustomersList.html" />
-    <Content Include="ReportTemplates\PurchaseOrder.html" />
-    <Content Include="ReportTemplates\RejectedOrders.html" />
     <Content Include="ReportTemplates\ReportStyle.css">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="ReportTemplates\SaleReceipt.html" />
-    <Content Include="ReportTemplates\Sales.html" />
     <Content Include="ReportTemplates\TicketReceipt.html" />
     <Content Include="ReportTemplates\TicketSales.html" />
     <Content Include="ReportTemplates\TicketsList.html" />

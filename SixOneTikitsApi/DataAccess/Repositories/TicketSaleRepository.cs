@@ -1,11 +1,10 @@
-using System;
 using System.Data.Entity;
 using System.IO;
 using System.Linq;
-using PianoBarApi.AxHelpers;
-using PianoBarApi.Models;
+using SixOneTikitsApi.AxHelpers;
+using SixOneTikitsApi.Models;
 
-namespace PianoBarApi.DataAccess.Repositories
+namespace SixOneTikitsApi.DataAccess.Repositories
 {
     public class TicketSaleRepository : BaseRepository<TicketSale>
     {

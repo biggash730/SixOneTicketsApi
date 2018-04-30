@@ -1,6 +1,6 @@
 ﻿using System.Web.Mvc;
 
-namespace PianoBarApi.Controllers
+namespace SixOneTikitsApi.Controllers
 {
     public class HomeController : Controller
     {

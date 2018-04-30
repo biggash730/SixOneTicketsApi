@@ -1,16 +1,15 @@
 using System;
 using System.Data.Entity;
 using System.Linq;
-using System.Security.Cryptography.X509Certificates;
 using System.Web.Http;
 using Newtonsoft.Json;
-using PianoBarApi.AxHelpers;
-using PianoBarApi.DataAccess.Filters;
-using PianoBarApi.DataAccess.Repositories;
-using PianoBarApi.Extensions;
-using PianoBarApi.Models;
+using SixOneTikitsApi.AxHelpers;
+using SixOneTikitsApi.DataAccess.Filters;
+using SixOneTikitsApi.DataAccess.Repositories;
+using SixOneTikitsApi.Extensions;
+using SixOneTikitsApi.Models;
 
-namespace PianoBarApi.Controllers
+namespace SixOneTikitsApi.Controllers
 {
     [Authorize]
     public class TicketsController : BaseApi<Ticket>

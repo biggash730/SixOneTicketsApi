@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace PianoBarApi.Models
+namespace SixOneTikitsApi.Models
 {
     // Models returned by AccountController actions.
 

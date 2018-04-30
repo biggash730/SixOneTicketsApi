@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
-using PianoBarApi.Models;
+using SixOneTikitsApi.Models;
 
-namespace PianoBarApi.LogicUnit
+namespace SixOneTikitsApi.LogicUnit
 {
     public class ThemeConfig
     {

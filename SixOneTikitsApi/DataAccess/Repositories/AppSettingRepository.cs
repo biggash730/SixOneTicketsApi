@@ -1,7 +1,7 @@
 ﻿using System.Linq;
-using PianoBarApi.Models;
+using SixOneTikitsApi.Models;
 
-namespace PianoBarApi.DataAccess.Repositories
+namespace SixOneTikitsApi.DataAccess.Repositories
 {
     public class AppSettingRepository : BaseRepository<AppSetting>
     {

@@ -4,7 +4,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Web.Http;
 
-namespace PianoBarApi.Results
+namespace SixOneTikitsApi.Results
 {
     public class ChallengeResult : IHttpActionResult
     {

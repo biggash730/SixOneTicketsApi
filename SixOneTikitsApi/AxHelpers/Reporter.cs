@@ -4,7 +4,7 @@ using PdfSharp;
 using PdfSharp.Drawing;
 using TheArtOfDev.HtmlRenderer.PdfSharp;
 
-namespace PianoBarApi.AxHelpers
+namespace SixOneTikitsApi.AxHelpers
 {
     public class Reporter
     {

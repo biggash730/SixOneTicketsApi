@@ -1,12 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Web;
-using PianoBarApi.AxHelpers;
-using PianoBarApi.Models;
 using Quartz;
+using SixOneTikitsApi.AxHelpers;
+using SixOneTikitsApi.Models;
 
-namespace PianoBarApi.Services
+namespace SixOneTikitsApi.Services
 {
     public class MessageProcessor
     {

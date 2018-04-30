@@ -6,9 +6,8 @@ using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
-using PianoBarApi.AxHelpers;
 
-namespace PianoBarApi.Models
+namespace SixOneTikitsApi.Models
 {
     public interface IHasId
     {
@@ -186,6 +185,13 @@ namespace PianoBarApi.Models
         public string Token { get; set; }
         public string Password { get; set; }
         public string PhoneNumber { get; set; }
+    }
+
+    public class ResetPasswordModel
+    {
+        public string UserName { get; set; }
+        public string NewPassword { get; set; }
+        public string ConfirmPassword { get; set; }
     }
 
     public class VerifyModel

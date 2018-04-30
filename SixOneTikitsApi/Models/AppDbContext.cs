@@ -5,7 +5,7 @@ using System.Linq;
 using Microsoft.AspNet.Identity.EntityFramework;
 using SixOneTikitsApi.Migrations;
 
-namespace PianoBarApi.Models
+namespace SixOneTikitsApi.Models
 {
     public class AppDbContext : IdentityDbContext<User>
     {

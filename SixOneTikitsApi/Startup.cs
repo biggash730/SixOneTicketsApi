@@ -3,11 +3,11 @@ using System.IO;
 using Microsoft.Owin;
 using Newtonsoft.Json;
 using Owin;
-using PianoBarApi;
+using SixOneTikitsApi;
 
 [assembly: OwinStartup(typeof(Startup))]
 
-namespace PianoBarApi
+namespace SixOneTikitsApi
 {
     public partial class Startup
     {

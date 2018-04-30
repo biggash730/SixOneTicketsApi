@@ -1,9 +1,9 @@
 ﻿using System.Security.Principal;
 using System.Threading.Tasks;
-using PianoBarApi.DataAccess.Repositories;
-using PianoBarApi.Models;
+using SixOneTikitsApi.DataAccess.Repositories;
+using SixOneTikitsApi.Models;
 
-namespace PianoBarApi.Extensions
+namespace SixOneTikitsApi.Extensions
 {
     public static class IdentityExtensions
     {

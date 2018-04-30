@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Data.Entity.Migrations;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
-using PianoBarApi.Models;
+using SixOneTikitsApi.Models;
 
 namespace SixOneTikitsApi.Migrations
 {
@@ -37,14 +37,10 @@ namespace SixOneTikitsApi.Migrations
                             new IdentityRole {Name = Privileges.CanCreateRole},
                             new IdentityRole {Name = Privileges.CanUpdateRole},
                             new IdentityRole {Name = Privileges.CanDeleteRole},
-                            new IdentityRole {Name = Privileges.CanViewAttendants},
-                            new IdentityRole {Name = Privileges.CanViewBar},
-                            new IdentityRole {Name = Privileges.CanViewTicketing},
-                            new IdentityRole {Name = Privileges.CanViewKitchen},
-                            new IdentityRole {Name = Privileges.CanAdjustStock},
-                            new IdentityRole {Name = Privileges.HasStore},
-                            new IdentityRole {Name = Privileges.CanViewCashier},
-                            new IdentityRole {Name = Privileges.CanCancelOrder},
+                            new IdentityRole {Name = Privileges.CanViewSoldTickets},
+                            new IdentityRole {Name = Privileges.CanSellTickets},
+                            new IdentityRole {Name = Privileges.CanCancelTickets},
+                            new IdentityRole {Name = Privileges.CanViewCancelledTickets},
                         };
 
             roles.ForEach(r => context.Roles.AddOrUpdate(q => q.Name, r));
@@ -60,14 +56,6 @@ namespace SixOneTikitsApi.Migrations
                 Privileges = a.Trim(','),
                 Locked = true
             };
-            var customer = new Profile
-            {
-                Name = "Customer",
-                Notes = "Customer Role",
-                Privileges = "",
-                Locked = true
-            };
-            context.Profiles.AddOrUpdate(x=> x.Name, customer);
             #endregion
 
             #region Users
@@ -93,7 +81,7 @@ namespace SixOneTikitsApi.Migrations
                     CreatedAt = DateTime.Now,
                     ModifiedAt = DateTime.Now,
                     TokenVerified = true,
-                    Locked = false,
+                    Locked = false
                 }, "password1");
 
                 if (res.Result.Succeeded)

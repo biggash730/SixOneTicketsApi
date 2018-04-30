@@ -1,4 +1,4 @@
-﻿namespace PianoBarApi.Models
+﻿namespace SixOneTikitsApi.Models
 {
     public class Privileges
     {
@@ -20,15 +20,10 @@
         public const string CanViewReport = "CanViewReport";
         public const string CanViewSetting = "CanViewSetting";
         public const string CanViewAdministration = "CanViewAdministration";
-        public const string CanViewAttendants = "CanViewAttendants";
-        public const string CanViewBar = "CanViewBar";
-        public const string CanViewTicketing = "CanViewTicketing";
-        public const string CanViewKitchen = "CanViewKitchen";
-        public const string CanViewCashier = "CanViewCashier";
-
-        public const string CanAdjustStock = "CanAdjustStock";
-        public const string CanCancelOrder = "CanCancelOrder";
-        public const string HasStore = "HasStore";
+        public const string CanSellTickets = "CanSellTickets";
+        public const string CanCancelTickets = "CanCancelTickets";
+        public const string CanViewSoldTickets = "CanViewSoldTickets";
+        public const string CanViewCancelledTickets = "CanViewCancelledTickets";
     }
 
     public class GenericProperties

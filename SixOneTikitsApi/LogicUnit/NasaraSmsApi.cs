@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Net.Http;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
-using PianoBarApi.DataAccess.Repositories;
-using PianoBarApi.Models;
+using SixOneTikitsApi.DataAccess.Repositories;
+using SixOneTikitsApi.Models;
 
-namespace PianoBarApi.LogicUnit
+namespace SixOneTikitsApi.LogicUnit
 {
     public class NasaraSmsApi
     {

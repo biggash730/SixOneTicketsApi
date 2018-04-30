@@ -2,11 +2,11 @@
 using System.Linq;
 using System.Web.Http;
 using Humanizer;
-using PianoBarApi.AxHelpers;
-using PianoBarApi.DataAccess.Repositories;
-using PianoBarApi.Models;
+using SixOneTikitsApi.AxHelpers;
+using SixOneTikitsApi.DataAccess.Repositories;
+using SixOneTikitsApi.Models;
 
-namespace PianoBarApi.Controllers
+namespace SixOneTikitsApi.Controllers
 {
     [Authorize]
     public class BaseApi<T> : ApiController where T : class

@@ -1,8 +1,7 @@
-﻿using System;
-using Quartz;
+﻿using Quartz;
 using Quartz.Impl;
 
-namespace PianoBarApi.Services
+namespace SixOneTikitsApi.Services
 {
     public class ServicesScheduler
     {

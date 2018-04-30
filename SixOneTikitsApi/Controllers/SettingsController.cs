@@ -1,15 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Drawing;
-using System.Linq;
-using System.Net;
-using System.Net.Http;
-using System.Web.Http;
-using PianoBarApi.AxHelpers;
-using PianoBarApi.Extensions;
-using PianoBarApi.Models;
+using SixOneTikitsApi.AxHelpers;
+using SixOneTikitsApi.Extensions;
+using SixOneTikitsApi.Models;
 
-namespace PianoBarApi.Controllers
+namespace SixOneTikitsApi.Controllers
 {
     public class ProfileController : BaseApi<Profile>
     {

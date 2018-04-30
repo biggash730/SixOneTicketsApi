@@ -1,7 +1,7 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
 
-namespace PianoBarApi.Models
+namespace SixOneTikitsApi.Models
 {
     // Models used as parameters to AccountController actions.
 

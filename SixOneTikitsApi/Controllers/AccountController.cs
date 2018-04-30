@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Data.Entity;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Web;
@@ -7,13 +6,13 @@ using System.Web.Http;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.Owin.Security;
-using PianoBarApi.AxHelpers;
-using PianoBarApi.DataAccess.Repositories;
-using PianoBarApi.Extensions;
-using PianoBarApi.Models;
+using SixOneTikitsApi.AxHelpers;
+using SixOneTikitsApi.DataAccess.Repositories;
+using SixOneTikitsApi.Extensions;
+using SixOneTikitsApi.Models;
 using WebGrease.Css.Extensions;
 
-namespace PianoBarApi.Controllers
+namespace SixOneTikitsApi.Controllers
 {
     [Authorize]
     [RoutePrefix("api/account")]
@@ -260,27 +259,27 @@ namespace PianoBarApi.Controllers
         [AllowAnonymous]
         [HttpPost]
         [Route("resetpassword")]
-        public ResultObj ResetPassword(ResetModel rm)
+        public ResultObj ResetPassword(ResetPasswordModel model)
         {
             try
             {
-                using (var db = new AppDbContext())
-                {
-                    var existing = db.ResetRequests.FirstOrDefault(x => x.Token == rm.Token && x.IsActive && x.PhoneNumber == rm.PhoneNumber);
-                    if (existing == null) throw new Exception("Password reset was not complete");
+                if (!ModelState.IsValid) return WebHelpers.ProcessException(ModelState.Values);
 
-                    var us = db.Users.FirstOrDefault(x => x.UserName == existing.PhoneNumber && !x.Hidden && !x.IsDeleted);
-                    if (us == null) throw new Exception("System Error");
-                    var result = UserManager.RemovePassword(us.Id);
-                    if (result.Succeeded)
-                    {
-                        var res = UserManager.AddPassword(us.Id, rm.Password);
-                        if (res.Succeeded) existing.IsActive = false;
-                        else throw new Exception(string.Join(", ", res.Errors));
-                    }
-                    db.SaveChanges();
-                    return WebHelpers.BuildResponse(null, "Password Reset was Successful", true, 1);
+                var user = UserManager.FindByName(model.UserName);
+                if (user == null) throw new Exception("Please check the username.");
+
+
+                //reset old passwords
+                var res = UserManager.RemovePassword(user.Id);
+                if (!res.Succeeded) return WebHelpers.ProcessException(res);
+                var result = UserManager.AddPassword(user.Id, model.NewPassword);
+                if (!result.Succeeded)
+                {
+                    throw new Exception(result.Errors.First());
                 }
+                return !result.Succeeded
+                    ? WebHelpers.ProcessException(result)
+                    : WebHelpers.BuildResponse(model, "Password reset was sucessful.", true, 1);
             }
             catch (Exception e)
             {

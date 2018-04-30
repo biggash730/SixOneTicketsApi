@@ -1,9 +1,9 @@
 using System;
 using System.Data.Entity;
 using System.Linq;
-using PianoBarApi.Models;
+using SixOneTikitsApi.Models;
 
-namespace PianoBarApi.DataAccess.Filters
+namespace SixOneTikitsApi.DataAccess.Filters
 {
     public class UserFilter : Filter<User>
     {

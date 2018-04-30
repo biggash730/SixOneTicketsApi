@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using System.Net.Http;
 using Newtonsoft.Json;
-using PianoBarApi.DataAccess.Repositories;
-using PianoBarApi.Models;
+using SixOneTikitsApi.DataAccess.Repositories;
+using SixOneTikitsApi.Models;
 
-namespace PianoBarApi.LogicUnit
+namespace SixOneTikitsApi.LogicUnit
 {
     public class Mailer
     {

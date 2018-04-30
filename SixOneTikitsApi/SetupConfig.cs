@@ -1,4 +1,4 @@
-﻿namespace PianoBarApi
+﻿namespace SixOneTikitsApi
 {
     public static class SetupConfig
     {

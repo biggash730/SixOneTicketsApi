@@ -1,7 +1,6 @@
 ﻿using System.Linq;
-using PianoBarApi.Models;
 
-namespace PianoBarApi.DataAccess.Filters
+namespace SixOneTikitsApi.DataAccess.Filters
 {
     public abstract class Filter<T>
     {

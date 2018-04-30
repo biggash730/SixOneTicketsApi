@@ -4,9 +4,9 @@ using System.Web.Optimization;
 using System.Web.Routing;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
-using PianoBarApi.Services;
+using SixOneTikitsApi.Services;
 
-namespace PianoBarApi
+namespace SixOneTikitsApi
 {
     public class WebApiApplication : System.Web.HttpApplication
     {
