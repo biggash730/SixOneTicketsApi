@@ -3,6 +3,7 @@ using System.Data.Entity;
 using System.Data.Entity.ModelConfiguration.Conventions;
 using System.Linq;
 using Microsoft.AspNet.Identity.EntityFramework;
+using SixOneTikitsApi.Migrations;
 
 namespace PianoBarApi.Models
 {
@@ -21,7 +22,7 @@ namespace PianoBarApi.Models
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             Configuration.LazyLoadingEnabled = true;
-            Database.SetInitializer(new MigrateDatabaseToLatestVersion<AppDbContext, Migrations.Configuration>());
+            Database.SetInitializer(new MigrateDatabaseToLatestVersion<AppDbContext, Configuration>());
             modelBuilder.Conventions.Remove<OneToManyCascadeDeleteConvention>();
             base.OnModelCreating(modelBuilder);
         }

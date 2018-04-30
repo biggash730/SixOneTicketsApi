@@ -5,9 +5,9 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using PianoBarApi.Models;
 
-namespace PianoBarApi.Migrations
+namespace SixOneTikitsApi.Migrations
 {
-    internal sealed class Configuration : DbMigrationsConfiguration<Models.AppDbContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<AppDbContext>
     {
         public UserManager<User> UserManager { get; private set; }
 
@@ -80,13 +80,13 @@ namespace PianoBarApi.Migrations
             };
 
             //Admin User
-            if (UserManager.FindByNameAsync("0207985828").Result == null)
+            if (UserManager.FindByNameAsync("admin").Result == null)
             {
                 var res = userManager.CreateAsync(new User
                 {
                     Name = "Administrator",
                     Profile = adminProfile,
-                    UserName = "0207985828",
+                    UserName = "admin",
                     PhoneNumber = "0207985828",
                     City = "Accra",
                     DateOfBirth = DateTime.Now.AddYears(-30),
@@ -98,7 +98,7 @@ namespace PianoBarApi.Migrations
 
                 if (res.Result.Succeeded)
                 {
-                    var userId = userManager.FindByNameAsync("0207985828").Result.Id;
+                    var userId = userManager.FindByNameAsync("admin").Result.Id;
                     roles.ForEach(q => userManager.AddToRole(userId, q.Name));
                 }
             }
